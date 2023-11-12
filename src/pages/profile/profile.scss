@@ -1,0 +1,108 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/resets.scss";
+
+.profile {
+  background-color: $background-peach-light;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: $font-primary;
+  color: $font-dark;
+
+  &-up {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &-img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .photo {
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba($main-purple, 0.9);
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .date {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: $font-dark;
+      }
+
+      .view {
+        cursor: pointer;
+        color: $main-purple;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .button-divider {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $main-purple;
+    margin: 10px auto;
+  }
+  .button-divider-item {
+    width: 50%;
+    border: none;
+    border-bottom: 2px solid $main-blue;
+  }
+
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .perfil-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      .info-item {
+        display: flex;
+        flex-direction: column;
+        .info-label {
+          color: $main-purple;
+          font-weight: bold;
+        }
+
+        .info-value {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .nav-mobile-profile {
+    margin-top: auto; // Coloca la barra de navegación en la parte inferior
+  }
+}
